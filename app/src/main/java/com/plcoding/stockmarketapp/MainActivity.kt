@@ -13,7 +13,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.plcoding.stockmarketapp.ui.theme.StockMarketAppTheme
 
 // ref: https://www.youtube.com/watch?v=uLs2FxFSWU4
-// alpha vantage API: IT6GV5CU6TZBJA6B
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
