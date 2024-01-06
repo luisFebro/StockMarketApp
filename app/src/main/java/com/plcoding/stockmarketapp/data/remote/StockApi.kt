@@ -5,7 +5,7 @@ import okhttp3.Response
 import okhttp3.ResponseBody
 import retrofit2.http.GET
 import retrofit2.http.Query
-// alpha vantage API:
+
 interface StockApi {
     @GET("query?function=LISTING_STATUS")
     suspend fun getListings(
@@ -18,6 +18,7 @@ interface StockApi {
         @Query("apikey") apiKey: String = API_KEY
     ): ResponseBody
 
+    // exp: https://youtu.be/uLs2FxFSWU4?t=7145s
     @GET("query?function=OVERVIEW")
     suspend fun getCompanyInfo(
         @Query("symbol") symbol: String,

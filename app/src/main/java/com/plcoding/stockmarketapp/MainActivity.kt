@@ -10,19 +10,26 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.plcoding.stockmarketapp.presentation.NavGraphs
 import com.plcoding.stockmarketapp.ui.theme.StockMarketAppTheme
+import com.ramcosta.composedestinations.DestinationsNavHost
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
 // ref: https://www.youtube.com/watch?v=uLs2FxFSWU4
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            StockMarketAppTheme {
+            StockMarketAppTheme(
+                darkTheme = true
+            ) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    
+                    DestinationsNavHost(navGraph = NavGraphs.root)
                 }
             }
         }

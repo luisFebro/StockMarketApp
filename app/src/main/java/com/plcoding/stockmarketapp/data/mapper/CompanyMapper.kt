@@ -5,6 +5,11 @@ import com.plcoding.stockmarketapp.data.remote.dto.CompanyInfoDto
 import com.plcoding.stockmarketapp.data.room_db.StockTable
 import com.plcoding.stockmarketapp.domain.model.CompanyInfo
 
+/*  Why mappers?
+https://youtu.be/uLs2FxFSWU4?t=6859s
+
+ */
+
 fun StockTable.toCompanyListing(): CompanyListing {
     return CompanyListing(
         name = name,
